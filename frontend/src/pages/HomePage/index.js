@@ -69,14 +69,14 @@ class HomePage extends React.Component {
                     <InputGroup>
                       <FormControl
                         autoFocus={true}
-                        defaultValue={process.env.REACT_APP_HOST + code}
+                        defaultValue={process.env.REACT_APP_HOST + '/' + code}
                         ref={(input) => this.inputURL = input}
                       />
                     <InputGroup.Append>
                       <Button variant="outline-secondary" onClick={() => this.copyToClipboard()}>Copiar</Button>
                     </InputGroup.Append>
                     </InputGroup>
-                    <p>Para acompanhar as estastíticas, acesse {process.env.REACT_APP_HOST + code + '/stats'}</p>
+                    <p>Para acompanhar as estastíticas, acesse {process.env.REACT_APP_HOST + '/' + code + '/stats'}</p>
                   </>
                 )
               )}
